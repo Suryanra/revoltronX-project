@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
+body {
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+  max-width: 100vw;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Header{
+  max-width:100vw;
+  height: 10vh;
+  padding:3px;
+  margin:1px;
+  font-weight: 800;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  letter-spacing: 3px;
+  box-sizing: border-box;
+  border-radius: 0 0 10px 10px;
+  background-color: cadetblue;
+}
+.NewComponentWrapper{
+    max-width:100vw;
+  height: 80vh;
+  background-color: antiquewhite;
+  display: flex;
+  flex-direction:column ;
+    box-sizing: border-box;
+    overflow-y: auto;
+    align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.NewsCard{
+  max-width:100vw;
+  border:2px solid rgb(0, 229, 198);
+  height:250px;
+  display: flex;
+padding:20px;
+display: flex;
+flex-direction: column;
+  box-sizing: border-box;
+}
+.NewsCard div{
+  max-width:100vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+
+.source_publication{
+border-top:1px solid;
+display: flex;
+justify-content: flex-end;
+
+}
+
+
+.NewsCard {
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.title {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+.hidden_information {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+}
+
+.hidden_information.visible {
+  max-height: 500px;
+  opacity: 1;
+  border-top: 1px solid green;
+}
+
+.source_publication {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: gray;
 }
